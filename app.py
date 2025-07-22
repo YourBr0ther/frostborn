@@ -142,5 +142,16 @@ def handle_connect():
         'timestamp': display_timestamp
     }, broadcast=True)
 
+# For gunicorn compatibility
+application = socketio
+
 if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+    # Check if running in production (Docker) or development
+    is_production = os.getenv('FLASK_ENV') == 'production'
+    
+    if is_production:
+        # Production mode - use allow_unsafe_werkzeug for Docker deployment
+        socketio.run(app, host='0.0.0.0', port=5000, debug=False, allow_unsafe_werkzeug=True)
+    else:
+        # Development mode
+        socketio.run(app, host='0.0.0.0', port=5000, debug=True)
