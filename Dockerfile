@@ -21,4 +21,4 @@ ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
 
 # Run the application with gunicorn for production
-CMD ["gunicorn", "--worker-class", "eventlet", "-w", "1", "--bind", "0.0.0.0:5000", "app:socketio"]
+CMD ["gunicorn", "--worker-class", "eventlet", "-w", "1", "--bind", "0.0.0.0:5000", "wsgi:application"]

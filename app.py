@@ -142,7 +142,7 @@ def handle_connect():
         'timestamp': display_timestamp
     }, broadcast=True)
 
-# For gunicorn compatibility
+# WSGI application - exported for external servers like gunicorn
 application = socketio
 
 if __name__ == '__main__':
