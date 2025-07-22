@@ -524,9 +524,10 @@ a:hover {
     border: 1px solid var(--border);
     border-left: 4px solid var(--primary);
     border-radius: 8px;
-    padding: 1.5rem;
-    margin: 1rem 0;
+    padding: 2rem;
+    margin: 1.5rem 0;
     font-style: italic;
+    line-height: 1.6;
 }
 
 blockquote {
@@ -534,6 +535,26 @@ blockquote {
     padding-left: 1rem;
     color: var(--text-secondary);
     font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* Quote box specific styling */
+.quote-box blockquote {
+    border: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.quote-box .blockquote p {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.quote-box .blockquote-footer {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 code {
