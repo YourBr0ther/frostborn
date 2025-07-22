@@ -122,25 +122,10 @@ def handle_message(data):
 
 @socketio.on('connect')
 def handle_connect():
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    display_timestamp = datetime.now().strftime('%H:%M:%S')
-    
-    message_data = {
-        'message': 'A new adventurer has joined the chat!',
-        'username': 'System',
-        'timestamp': timestamp,
-        'display_timestamp': display_timestamp
-    }
-    
-    # Save system message
-    save_message(message_data)
-    
-    # Broadcast to all clients
-    emit('message', {
-        'message': message_data['message'],
-        'username': message_data['username'],
-        'timestamp': display_timestamp
-    }, broadcast=True)
+    # Simply acknowledge connection without broadcasting a message
+    # This prevents "new adventurer joined" spam on page reloads
+    print(f"Client connected at {datetime.now().strftime('%H:%M:%S')}")
+    pass
 
 # WSGI application - exported for external servers like gunicorn
 application = socketio
