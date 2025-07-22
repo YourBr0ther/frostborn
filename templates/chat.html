@@ -120,6 +120,34 @@ const usernameInput = document.getElementById('username');
 const sendButton = document.getElementById('sendButton');
 const connectionStatus = document.getElementById('connection-status');
 
+// Load existing messages when page loads
+async function loadExistingMessages() {
+    try {
+        const response = await fetch('/api/messages');
+        const messages = await response.json();
+        
+        // Clear the welcome message
+        messagesContainer.innerHTML = '';
+        
+        // Add all existing messages
+        messages.forEach(msg => {
+            const displayTime = msg.display_timestamp || msg.timestamp.split(' ')[1] || 'Unknown';
+            addMessage(msg.username, msg.message, displayTime, false); // false = don't scroll for each message
+        });
+        
+        // Scroll to bottom after loading all messages
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        console.log(`Loaded ${messages.length} existing messages`);
+    } catch (error) {
+        console.error('Error loading messages:', error);
+        // Keep the welcome message if loading fails
+    }
+}
+
+// Load messages when page is ready
+document.addEventListener('DOMContentLoaded', loadExistingMessages);
+
 // Connection status handlers
 socket.on('connect', function() {
     connectionStatus.textContent = 'Connected';
@@ -151,7 +179,7 @@ function sendMessage() {
 }
 
 // Add message to chat
-function addMessage(username, message, timestamp) {
+function addMessage(username, message, timestamp, shouldScroll = true) {
     const messageDiv = document.createElement('div');
     messageDiv.className = 'message mb-2';
     
@@ -169,7 +197,11 @@ function addMessage(username, message, timestamp) {
     `;
     
     messagesContainer.appendChild(messageDiv);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    
+    // Only scroll if requested (to avoid scrolling during bulk loading)
+    if (shouldScroll) {
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
 }
 
 // Event listeners

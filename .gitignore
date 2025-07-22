@@ -96,3 +96,6 @@ pids/
 # Temporary files
 *.tmp
 *.temp
+
+# Chat messages storage
+chat_messages.json
