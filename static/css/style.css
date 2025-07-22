@@ -692,20 +692,8 @@ pre {
 }
 
 /* Animations */
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
-}
+/* Removed fadeIn animation - no longer needed */
 
-.card:hover {
-    animation: fadeIn 0.3s ease;
-}
 
 /* Interactive Map */
 .location-marker {
