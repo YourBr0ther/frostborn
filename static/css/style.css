@@ -1,0 +1,530 @@
+/* Frostborn Prophecy - D&D Theme with Dark Mode Support */
+
+/* Light Theme Variables */
+:root {
+    /* Frost & Ice Colors */
+    --frost-light: #e8f4f8;
+    --frost-medium: #7fb3d3;
+    --frost-dark: #2c5282;
+    --frost-darker: #1a365d;
+    
+    /* Fire & Warm Colors */
+    --fire-light: #ffeaa7;
+    --fire-medium: #e17055;
+    --fire-dark: #a0522d;
+    
+    /* D&D Fantasy Colors */
+    --parchment: #f4f1e8;
+    --leather: #8b4513;
+    --gold: #ffd700;
+    --silver: #c0c0c0;
+    --bronze: #cd7f32;
+    
+    /* UI Colors */
+    --bg-primary: linear-gradient(135deg, #f4f1e8 0%, #e8f4f8 50%, #d6e8f5 100%);
+    --bg-secondary: rgba(244, 241, 232, 0.95);
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --border-color: rgba(127, 179, 211, 0.3);
+    --shadow: rgba(44, 82, 130, 0.15);
+    
+    /* Card & Element Colors */
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-header-bg: linear-gradient(135deg, var(--frost-dark), var(--frost-darker));
+    --navbar-bg: linear-gradient(135deg, #1a202c, #2d3748);
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    /* Dark D&D Colors */
+    --frost-light: #1a2332;
+    --frost-medium: #4a5f7a;
+    --frost-dark: #6b7d96;
+    --frost-darker: #8a9cb2;
+    
+    /* Fire colors remain warm in dark mode */
+    --fire-light: #ffb347;
+    --fire-medium: #ff7043;
+    --fire-dark: #d84315;
+    
+    /* Dark D&D Fantasy Colors */
+    --parchment: #1a1a1a;
+    --leather: #4a3429;
+    --gold: #b8860b;
+    --silver: #708090;
+    --bronze: #8b4513;
+    
+    /* Dark UI Colors */
+    --bg-primary: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2c2c2c 100%);
+    --bg-secondary: rgba(26, 26, 26, 0.95);
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e0;
+    --text-muted: #a0aec0;
+    --border-color: rgba(75, 95, 122, 0.4);
+    --shadow: rgba(0, 0, 0, 0.3);
+    
+    /* Dark Card & Element Colors */
+    --card-bg: rgba(42, 42, 42, 0.95);
+    --card-header-bg: linear-gradient(135deg, #1a202c, #2d3748);
+    --navbar-bg: linear-gradient(135deg, #0d1117, #1c2128);
+}
+
+/* Base Styles */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    background: var(--bg-primary);
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Cinzel', serif;
+    color: var(--text-primary);
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    text-shadow: 1px 1px 2px var(--shadow);
+}
+
+.display-1, .display-2, .display-3, .display-4 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px var(--shadow);
+}
+
+/* Navigation Styles */
+.navbar-dark {
+    background: var(--navbar-bg) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(226, 232, 240, 0.9) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: var(--gold) !important;
+    transform: translateY(-1px);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 1px;
+}
+
+/* Dark Mode Toggle Button */
+#theme-toggle {
+    border-color: var(--frost-medium);
+    color: var(--frost-medium);
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--frost-medium);
+    border-color: var(--frost-medium);
+    color: var(--text-primary);
+    transform: rotate(180deg);
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 80px;
+    min-height: calc(100vh - 160px);
+}
+
+/* Hero Banner - More Medieval/Fantasy Style */
+.hero-banner {
+    background: linear-gradient(
+        rgba(13, 71, 161, 0.8), 
+        rgba(21, 101, 192, 0.6)
+    ),
+    radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 69, 0, 0.1) 0%, transparent 50%),
+    var(--frost-darker);
+    background-size: cover, 200px 200px, 300px 300px, cover;
+    background-position: center, 0 0, 100% 100%, center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--gold);
+}
+
+[data-theme="dark"] .hero-banner {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8), 
+        rgba(26, 26, 26, 0.7)
+    ),
+    radial-gradient(circle at 20% 50%, rgba(255, 140, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(220, 20, 60, 0.15) 0%, transparent 50%),
+    #1a1a1a;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 4rem 0;
+    backdrop-filter: blur(2px);
+}
+
+/* Card Styles - Medieval Inspired */
+.card {
+    border: 2px solid var(--border-color);
+    box-shadow: 0 8px 16px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(45deg, var(--gold), var(--silver), var(--bronze), var(--gold));
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 0.3;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px var(--shadow);
+}
+
+.card-header {
+    background: var(--card-header-bg) !important;
+    border-radius: 12px 12px 0 0 !important;
+    border-bottom: 2px solid var(--gold);
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* Page Headers - Fantasy Style */
+.page-header {
+    text-align: center;
+    padding: 3rem 0;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.page-header::before {
+    content: '⚔️';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.page-header::after {
+    content: '🛡️';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+/* Button Styles - D&D Inspired */
+.btn-frost-light {
+    background: linear-gradient(135deg, var(--gold), var(--fire-medium));
+    border: 2px solid var(--bronze);
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-frost-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.btn-frost-light:hover::before {
+    left: 100%;
+}
+
+.btn-frost-light:hover {
+    background: linear-gradient(135deg, var(--fire-medium), var(--gold));
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.btn-outline-frost {
+    border: 2px solid var(--frost-dark);
+    color: var(--frost-dark);
+    background: transparent;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    position: relative;
+}
+
+.btn-outline-frost:hover {
+    background: var(--frost-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Progress Bars - More Fantasy */
+.bg-frost-progress {
+    background: linear-gradient(90deg, var(--frost-medium), var(--gold)) !important;
+}
+
+.progress {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    transition: width 0.8s ease;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(rgba(255,255,255,0.3), transparent);
+}
+
+/* Timeline Styles - Medieval Chronicle */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--gold), var(--bronze), var(--silver));
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -25px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    background: var(--card-bg);
+    box-shadow: 0 0 0 3px var(--bg-secondary);
+}
+
+.timeline-content {
+    padding-left: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Quote Boxes - Scroll-like */
+.quote-box, .prophecy-fragment {
+    background: var(--card-bg);
+    border: 2px solid var(--bronze);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    font-style: italic;
+    backdrop-filter: blur(5px);
+}
+
+.quote-box::before, .prophecy-fragment::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 3rem;
+    color: var(--gold);
+    background: var(--card-bg);
+    padding: 0 0.5rem;
+}
+
+/* Accordion - Medieval Style */
+.accordion-button {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--frost-medium) !important;
+    color: white !important;
+    border-color: var(--gold) !important;
+}
+
+/* Dropdown Menus */
+.dropdown-menu {
+    background: var(--card-bg) !important;
+    border: 2px solid var(--border-color) !important;
+    box-shadow: 0 8px 16px var(--shadow) !important;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: var(--frost-medium) !important;
+    color: white !important;
+}
+
+/* Footer - Medieval Style */
+footer {
+    background: var(--navbar-bg) !important;
+    border-top: 3px solid var(--gold);
+    color: var(--text-secondary) !important;
+}
+
+/* Faction & Status Badges */
+.badge {
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Map and Interactive Elements */
+.location-marker {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 4px var(--shadow));
+}
+
+.location-marker:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(4px 4px 8px var(--shadow));
+}
+
+.location-label {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Chat Styles */
+.message-content {
+    border: 1px solid var(--border-color) !important;
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-banner {
+        min-height: 40vh;
+    }
+    
+    .main-content {
+        padding-top: 70px;
+    }
+    
+    .page-header {
+        padding: 2rem 1rem;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline-marker {
+        left: -20px;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Animation Enhancements */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px var(--gold); }
+    50% { box-shadow: 0 0 20px var(--gold), 0 0 30px var(--gold); }
+}
+
+.card:hover {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Special Effects for Dark Mode */
+[data-theme="dark"] .card {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .hero-banner {
+    box-shadow: inset 0 0 100px rgba(255, 140, 0, 0.1);
+}
+
+/* Text Colors for Dark Mode */
+[data-theme="dark"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .text-frost-dark {
+    color: var(--frost-darker) !important;
+}

@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Player Bios & Party Sheet - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-users me-3"></i>Player Bios & Party Sheet
+        </h1>
+        <p class="lead">Meet the heroes who will determine the world's fate</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">Character Name 1</h3>
+                </div>
+                <div class="card-body">
+                    <div class="character-portrait mb-3 text-center">
+                        <i class="fas fa-user-circle fa-5x text-frost-dark"></i>
+                    </div>
+                    <h5>Class & Level</h5>
+                    <p class="text-muted">Level X [Class Name]</p>
+                    
+                    <h5>Backstory</h5>
+                    <p>A brief, player-approved backstory will go here. This section will contain the character's background, motivations, and how they came to be part of this group.</p>
+                    
+                    <h5>Notable Abilities</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-magic me-2 text-frost-dark"></i>Special Ability 1</li>
+                        <li><i class="fas fa-sword me-2 text-frost-dark"></i>Combat Expertise</li>
+                        <li><i class="fas fa-eye me-2 text-frost-dark"></i>Unique Skill</li>
+                    </ul>
+                    
+                    <div class="quote-box mt-3">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"Quote of the session goes here!"</p>
+                            <footer class="blockquote-footer">Recent memorable moment</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">Character Name 2</h3>
+                </div>
+                <div class="card-body">
+                    <div class="character-portrait mb-3 text-center">
+                        <i class="fas fa-user-circle fa-5x text-frost-dark"></i>
+                    </div>
+                    <h5>Class & Level</h5>
+                    <p class="text-muted">Level X [Class Name]</p>
+                    
+                    <h5>Backstory</h5>
+                    <p>Another character's background story will be detailed here, focusing on their role in the party and their personal stakes in the campaign.</p>
+                    
+                    <h5>Notable Abilities</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-shield-alt me-2 text-frost-dark"></i>Defensive Mastery</li>
+                        <li><i class="fas fa-heart me-2 text-frost-dark"></i>Healing Powers</li>
+                        <li><i class="fas fa-compass me-2 text-frost-dark"></i>Navigation Expert</li>
+                    </ul>
+                    
+                    <div class="quote-box mt-3">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"Another memorable quote!"</p>
+                            <footer class="blockquote-footer">Epic roleplay moment</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add more character cards as needed -->
+    
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-project-diagram me-2"></i>Relationship Web
+                    </h3>
+                </div>
+                <div class="card-body text-center">
+                    <p>A visual diagram showing how the party members know each other and their relationships will go here.</p>
+                    <div class="relationship-placeholder">
+                        <i class="fas fa-users fa-3x text-frost-dark mb-3"></i>
+                        <p class="text-muted">Relationship diagram coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-eye me-2"></i>Known Secrets
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent">Secret that players have chosen to share</li>
+                        <li class="list-group-item bg-transparent">Another publicly known character detail</li>
+                        <li class="list-group-item bg-transparent">Shared backstory element</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-user-secret me-2"></i>Hidden Secrets
+                    </h4>
+                </div>
+                <div class="card-body text-center">
+                    <i class="fas fa-lock fa-3x text-frost-dark mb-3"></i>
+                    <p class="text-muted">Some secrets are meant to be discovered in time...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% block title %}Bestiary - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-dragon me-3"></i>Bestiary
+        </h1>
+        <p class="lead">Creatures encountered in the world of ice and fire</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Frost Dire Wolf</h4>
+                    <span class="badge bg-primary">Ice Creature</span>
+                </div>
+                <div class="card-body">
+                    <div class="creature-icon mb-3 text-center">
+                        <i class="fas fa-wolf-pack-battalion fa-3x text-primary"></i>
+                    </div>
+                    <p class="small">Massive wolves touched by the Everfrost, with ice-crystal fur and breath that can freeze blood.</p>
+                    
+                    <h6>Encountered</h6>
+                    <p class="small text-muted">Session 3 - Frozen Crossroads patrol</p>
+                    
+                    <h6>Notable Features</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-snowflake me-2"></i>Frost breath attack</li>
+                        <li><i class="fas fa-paw me-2"></i>Pack tactics</li>
+                        <li><i class="fas fa-eye me-2"></i>Cold immunity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Iceborn Sentinel</h4>
+                    <span class="badge bg-info">Humanoid</span>
+                </div>
+                <div class="card-body">
+                    <div class="creature-icon mb-3 text-center">
+                        <i class="fas fa-user-shield fa-3x text-info"></i>
+                    </div>
+                    <p class="small">Elite warriors of the Iceborn Warlords, enhanced by frost magic and wearing crystalline armor.</p>
+                    
+                    <h6>Encountered</h6>
+                    <p class="small text-muted">Session 3 - Diplomatic encounter</p>
+                    
+                    <h6>Notable Features</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-shield-alt me-2"></i>Ice armor</li>
+                        <li><i class="fas fa-sword me-2"></i>Frost-enchanted weapons</li>
+                        <li><i class="fas fa-brain me-2"></i>Tactical intelligence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Animated Snowman</h4>
+                    <span class="badge bg-warning">Construct</span>
+                </div>
+                <div class="card-body">
+                    <div class="creature-icon mb-3 text-center">
+                        <i class="fas fa-snowman fa-3x text-warning"></i>
+                    </div>
+                    <p class="small">Seemingly innocent snow constructs that spring to life when threatened, created by frost magic.</p>
+                    
+                    <h6>Encountered</h6>
+                    <p class="small text-muted">Session 2 - Surprise ambush near Ember's Forge</p>
+                    
+                    <h6>Notable Features</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-surprise me-2"></i>Ambush predator</li>
+                        <li><i class="fas fa-snowball me-2"></i>Snowball barrage</li>
+                        <li><i class="fas fa-magic me-2"></i>Magic resistance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Flame Salamander</h4>
+                    <span class="badge bg-danger">Fire Creature</span>
+                </div>
+                <div class="card-body">
+                    <div class="creature-icon mb-3 text-center">
+                        <i class="fas fa-dragon fa-3x text-danger"></i>
+                    </div>
+                    <p class="small">Rare fire elementals that have survived the Everfrost by hiding in volcanic vents and magical forges.</p>
+                    
+                    <h6>Encountered</h6>
+                    <p class="small text-muted">Session 2 - Guardian of Ember's Forge</p>
+                    
+                    <h6>Notable Features</h6>
+                    <ul class="small list-unstyled mb-3">
+                        <li><i class="fas fa-fire me-2"></i>Fire breath and immunity</li>
+                        <li><i class="fas fa-gem me-2"></i>Heat-seeking abilities</li>
+                        <li><i class="fas fa-heart me-2"></i>Protective of fire magic users</li>
+                    </ul>
+                    
+                    <div class="lore-snippet p-2 bg-light rounded">
+                        <small class="text-muted"><strong>Lore:</strong> These creatures are said to be the last guardians of the ancient flame temples, now nearly extinct due to the spreading cold.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Cultist of the Everfrost</h4>
+                    <span class="badge bg-secondary">Humanoid</span>
+                </div>
+                <div class="card-body">
+                    <div class="creature-icon mb-3 text-center">
+                        <i class="fas fa-user-secret fa-3x text-secondary"></i>
+                    </div>
+                    <p class="small">Fanatical followers who have embraced the cold so completely that ice crystals grow from their skin.</p>
+                    
+                    <h6>Encountered</h6>
+                    <p class="small text-muted">Not yet encountered - described in rumors</p>
+                    
+                    <h6>Rumored Features</h6>
+                    <ul class="small list-unstyled mb-3">
+                        <li><i class="fas fa-snowflake me-2"></i>Cold-based spellcasting</li>
+                        <li><i class="fas fa-brain me-2"></i>Fanatical devotion</li>
+                        <li><i class="fas fa-skull me-2"></i>Sacrificial rituals</li>
+                    </ul>
+                    
+                    <div class="warning-box p-2 bg-warning bg-opacity-25 rounded">
+                        <small><strong>Warning:</strong> Approach with extreme caution. Known to attack fire magic users on sight.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-question-circle me-2"></i>Legendary Creatures (Rumored)
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-3">
+                            <i class="fas fa-dragon fa-4x text-primary mb-2"></i>
+                            <h5>Frost Leviathan</h5>
+                            <p class="small text-muted">Massive ice dragon said to sleep beneath the Frozen Throne</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <i class="fas fa-fire-flame-curved fa-4x text-danger mb-2"></i>
+                            <h5>Phoenix of the Last Ember</h5>
+                            <p class="small text-muted">Legendary bird of fire, guardian of the Sunforged Spire</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <i class="fas fa-balance-scale fa-4x text-warning mb-2"></i>
+                            <h5>The Balanced One</h5>
+                            <p class="small text-muted">Mythical being who embodies perfect harmony between elements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

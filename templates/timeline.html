@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}Campaign Timeline - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-clock me-3"></i>Campaign Timeline
+        </h1>
+        <p class="lead">Track the progression of events in both game time and real time</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-scroll me-2"></i>In-Game Timeline
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6>Day 1 - The Convergence Begins</h6>
+                                <p class="small mb-1">Heroes meet at The Last Hearth tavern. Seer Whitevision delivers the prophecy warning.</p>
+                                <span class="badge bg-info">Prophecy Discovery</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <h6>Day 3 - The Smith's Revelation</h6>
+                                <p class="small mb-1">Party meets Ember Blackforge. First Sunforged fragment discovered in her forge.</p>
+                                <span class="badge bg-danger">Major Discovery</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-marker bg-primary"></div>
+                            <div class="timeline-content">
+                                <h6>Day 7 - Frozen Crossroads</h6>
+                                <p class="small mb-1">Encounter with Iceborn patrol. Choice of northern route leads to frost creature battles.</p>
+                                <span class="badge bg-primary">Major Battle</span>
+                                <span class="badge bg-secondary">World Change</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-info"></div>
+                            <div class="timeline-content">
+                                <h6>Current Day - Day 8</h6>
+                                <p class="small mb-1">Party investigates the abandoned watchtower. Current location: The Frostlands.</p>
+                                <span class="badge bg-success">Current</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-calendar-alt me-2"></i>Real-Time Timeline
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6>Session 1 - Campaign Launch</h6>
+                                <p class="small mb-1">Date: TBD<br>Duration: ~4 hours</p>
+                                <small class="text-muted">Character introductions and prophecy delivery</small>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <h6>Session 2 - Embers in Snow</h6>
+                                <p class="small mb-1">Date: TBD<br>Duration: ~3.5 hours</p>
+                                <small class="text-muted">Meeting Ember and discovering first fragment</small>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-marker bg-primary"></div>
+                            <div class="timeline-content">
+                                <h6>Session 3 - Frozen Crossroads</h6>
+                                <p class="small mb-1">Date: TBD<br>Duration: ~4 hours</p>
+                                <small class="text-muted">Current session - diplomatic encounters</small>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-secondary"></div>
+                            <div class="timeline-content">
+                                <h6>Next Session</h6>
+                                <p class="small mb-1">Date: TBD<br>Expected focus: Watchtower investigation</p>
+                                <small class="text-muted">Check with DM for scheduling</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>Event Statistics
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-6 mb-3">
+                            <div class="stat-box p-3 border rounded">
+                                <h4 class="text-frost-dark mb-1">3</h4>
+                                <small class="text-muted">Major Battles</small>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="stat-box p-3 border rounded">
+                                <h4 class="text-frost-dark mb-1">2</h4>
+                                <small class="text-muted">Lore Discoveries</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box p-3 border rounded">
+                                <h4 class="text-frost-dark mb-1">5</h4>
+                                <small class="text-muted">World Changes</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box p-3 border rounded">
+                                <h4 class="text-frost-dark mb-1">8</h4>
+                                <small class="text-muted">Days Elapsed</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

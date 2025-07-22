@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block title %}Player Resources - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-dice-d20 me-3"></i>Player Resources
+        </h1>
+        <p class="lead">Quick rules, survival tips, and campaign guidelines</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-gavel me-2"></i>House Rules
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="rule-section mb-4">
+                        <h5><i class="fas fa-thermometer-empty me-2"></i>Cold Weather Effects</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><strong>Extreme Cold:</strong> Constitution saves every hour in Everfrost territory</li>
+                            <li class="mb-2"><strong>Fire Magic Bonus:</strong> +1 to fire spell attack rolls and damage in cold areas</li>
+                            <li class="mb-2"><strong>Ice Magic Enhancement:</strong> Ice/frost spells deal +2 damage in Everfrost regions</li>
+                            <li class="mb-2"><strong>Warmth Sources:</strong> Magical fires prevent cold exhaustion for the group</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-section mb-4">
+                        <h5><i class="fas fa-dice me-2"></i>Combat Modifications</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><strong>Inspiration Usage:</strong> Can be spent after seeing the roll result</li>
+                            <li class="mb-2"><strong>Flanking:</strong> Grants advantage when positioning allows</li>
+                            <li class="mb-2"><strong>Elemental Weaknesses:</strong> Fire creatures take +50% cold damage, ice creatures take +50% fire damage</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-section">
+                        <h5><i class="fas fa-comments me-2"></i>Roleplay Encouragement</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><strong>Character Voices:</strong> Bonus inspiration for staying in character</li>
+                            <li class="mb-2"><strong>Creative Solutions:</strong> Non-combat resolutions often yield better rewards</li>
+                            <li class="mb-2"><strong>Teamwork Bonus:</strong> Group tactics and coordination provide mechanical benefits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-route me-2"></i>Survival in the Frostlands
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="survival-section mb-4">
+                        <h5><i class="fas fa-walking me-2"></i>Travel Pace</h5>
+                        <div class="pace-table">
+                            <div class="row small">
+                                <div class="col-4"><strong>Pace</strong></div>
+                                <div class="col-4"><strong>Distance/Day</strong></div>
+                                <div class="col-4"><strong>Effects</strong></div>
+                            </div>
+                            <hr class="my-2">
+                            <div class="row small mb-1">
+                                <div class="col-4">Slow</div>
+                                <div class="col-4">18 miles</div>
+                                <div class="col-4">Stealth possible</div>
+                            </div>
+                            <div class="row small mb-1">
+                                <div class="col-4">Normal</div>
+                                <div class="col-4">24 miles</div>
+                                <div class="col-4">Standard travel</div>
+                            </div>
+                            <div class="row small">
+                                <div class="col-4">Fast</div>
+                                <div class="col-4">30 miles</div>
+                                <div class="col-4">-5 Perception</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="survival-section mb-4">
+                        <h5><i class="fas fa-fire me-2"></i>Warmth & Shelter</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><strong>Shelter Priority:</strong> Always seek shelter before nightfall in Everfrost areas</li>
+                            <li class="mb-2"><strong>Fire Maintenance:</strong> Requires fuel every 4 hours or magical enhancement</li>
+                            <li class="mb-2"><strong>Group Warmth:</strong> Sharing body heat provides advantage on cold saves</li>
+                            <li class="mb-2"><strong>Frost-Proof Gear:</strong> Prevents equipment from freezing and breaking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="survival-section">
+                        <h5><i class="fas fa-exclamation-triangle me-2"></i>Hazards to Watch For</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><i class="fas fa-eye me-2 text-warning"></i>Frost mirages that lead travelers astray</li>
+                            <li class="mb-2"><i class="fas fa-mountain me-2 text-danger"></i>Avalanche zones in mountainous regions</li>
+                            <li class="mb-2"><i class="fas fa-water me-2 text-primary"></i>Thin ice over hidden crevasses</li>
+                            <li class="mb-2"><i class="fas fa-wind me-2 text-info"></i>Frost storms that reduce visibility to zero</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-handshake me-2"></i>Session Zero Agreements
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="agreement-section mb-4">
+                                <h5><i class="fas fa-theater-masks me-2"></i>Tone & Themes</h5>
+                                <ul class="small list-unstyled">
+                                    <li class="mb-2"><strong>Overall Tone:</strong> Epic fantasy with moments of hope in dark times</li>
+                                    <li class="mb-2"><strong>Themes:</strong> Balance, sacrifice, the cost of power, redemption</li>
+                                    <li class="mb-2"><strong>Content Rating:</strong> PG-13 - mature themes but not graphic violence</li>
+                                    <li class="mb-2"><strong>Humor:</strong> Welcome but shouldn't undermine serious moments</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="agreement-section mb-4">
+                                <h5><i class="fas fa-shield-alt me-2"></i>Safety Tools</h5>
+                                <ul class="small list-unstyled">
+                                    <li class="mb-2"><strong>X-Card:</strong> Anyone can pause/skip content that makes them uncomfortable</li>
+                                    <li class="mb-2"><strong>Lines:</strong> Content we absolutely avoid (set in private with DM)</li>
+                                    <li class="mb-2"><strong>Veils:</strong> Content that happens 'off-screen' if it comes up</li>
+                                    <li class="mb-2"><strong>Open Door:</strong> Players can step out if needed, no questions asked</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="agreement-section">
+                        <h5><i class="fas fa-users me-2"></i>Table Expectations</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="small list-unstyled">
+                                    <li class="mb-1"><i class="fas fa-check me-2 text-success"></i>Respect everyone at the table</li>
+                                    <li class="mb-1"><i class="fas fa-check me-2 text-success"></i>Share spotlight with other players</li>
+                                    <li class="mb-1"><i class="fas fa-check me-2 text-success"></i>Communicate openly about concerns</li>
+                                    <li class="mb-1"><i class="fas fa-check me-2 text-success"></i>Support each other's storytelling</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="small list-unstyled">
+                                    <li class="mb-1"><i class="fas fa-phone me-2 text-info"></i>Phones on silent during sessions</li>
+                                    <li class="mb-1"><i class="fas fa-calendar me-2 text-info"></i>Give 24hrs notice for absence</li>
+                                    <li class="mb-1"><i class="fas fa-dice me-2 text-info"></i>Come prepared (character sheet, dice, etc.)</li>
+                                    <li class="mb-1"><i class="fas fa-pizza-slice me-2 text-info"></i>Rotate snack/drink responsibility</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-link me-2"></i>External Resources
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="resource-links">
+                        <div class="resource-item mb-3 p-3 border rounded">
+                            <h6><i class="fas fa-dragon me-2"></i>D&D Beyond Campaign</h6>
+                            <p class="small mb-2">Access character sheets, spells, and campaign-specific content</p>
+                            <a href="#" class="btn btn-sm btn-outline-frost">Join Campaign</a>
+                        </div>
+                        
+                        <div class="resource-item mb-3 p-3 border rounded">
+                            <h6><i class="fas fa-map me-2"></i>Roll20/Foundry</h6>
+                            <p class="small mb-2">Virtual tabletop for battle maps and visual aids</p>
+                            <a href="#" class="btn btn-sm btn-outline-frost">Game Link</a>
+                        </div>
+                        
+                        <div class="resource-item mb-3 p-3 border rounded">
+                            <h6><i class="fas fa-comments me-2"></i>Discord Server</h6>
+                            <p class="small mb-2">Between-session roleplay and campaign discussion</p>
+                            <a href="#" class="btn btn-sm btn-outline-frost">Join Server</a>
+                        </div>
+                        
+                        <div class="resource-item p-3 border rounded">
+                            <h6><i class="fas fa-book me-2"></i>Reference Docs</h6>
+                            <p class="small mb-2">Official D&D rules and homebrew content for this campaign</p>
+                            <a href="#" class="btn btn-sm btn-outline-frost">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-clock me-2"></i>Session Reminders
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="small list-unstyled">
+                        <li class="mb-2"><i class="fas fa-calendar me-2"></i><strong>Next Session:</strong> TBD</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i><strong>Duration:</strong> ~4 hours</li>
+                        <li class="mb-2"><i class="fas fa-dice me-2"></i><strong>Bring:</strong> Character sheet, dice, snacks</li>
+                        <li class="mb-2"><i class="fas fa-brain me-2"></i><strong>Prep:</strong> Review last session summary</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

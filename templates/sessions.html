@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}Session Recordings & Summaries - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-play-circle me-3"></i>Session Recordings & Summaries
+        </h1>
+        <p class="lead">Relive the epic moments of your journey through ice and fire</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">Session 3: The Frozen Crossroads</h3>
+                    <small class="text-muted">Latest Session - Date TBD</small>
+                </div>
+                <div class="card-body">
+                    <div class="recording-placeholder mb-3 text-center p-4 border rounded">
+                        <i class="fas fa-video fa-3x text-frost-dark mb-3"></i>
+                        <p class="mb-0">Session recording will be embedded here</p>
+                        <small class="text-muted">Audio/Video player coming soon</small>
+                    </div>
+                    
+                    <h5>Previously on Frostborn Prophecy...</h5>
+                    <ul class="session-highlights">
+                        <li>The party encountered frost-touched dire wolves at the crossroads</li>
+                        <li>A mysterious figure in white warned of "the convergence"</li>
+                        <li>Evidence found of Ashblood Legion movements in the area</li>
+                        <li>Party decided to investigate the abandoned watchtower</li>
+                    </ul>
+                    
+                    <h5>Key Decisions Made</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="decision-box p-3 border rounded mb-3">
+                                <h6><i class="fas fa-crossroads me-2"></i>Path Choice</h6>
+                                <p class="mb-1">Chose the northern route through the Frostlands</p>
+                                <small class="text-muted">Consequence: Earlier encounter with ice creatures</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="decision-box p-3 border rounded mb-3">
+                                <h6><i class="fas fa-handshake me-2"></i>Diplomacy</h6>
+                                <p class="mb-1">Attempted to negotiate with the Iceborn patrol</p>
+                                <small class="text-muted">Consequence: Gained valuable information</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">Session 2: Embers in the Snow</h3>
+                    <small class="text-muted">Previous Session</small>
+                </div>
+                <div class="card-body">
+                    <div class="recording-placeholder mb-3 text-center p-3 border rounded">
+                        <i class="fas fa-audio-description fa-2x text-frost-dark mb-2"></i>
+                        <p class="mb-0 small">Audio recording placeholder</p>
+                    </div>
+                    
+                    <h6>Session Summary</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check me-2 text-success"></i>First meeting with Ember Blackforge</li>
+                        <li><i class="fas fa-check me-2 text-success"></i>Discovered the Sunforged fragment</li>
+                        <li><i class="fas fa-check me-2 text-success"></i>Learned about the advancing Everfrost</li>
+                        <li><i class="fas fa-check me-2 text-success"></i>Party formed alliance with local resistance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">Session 1: When Winter Comes</h3>
+                    <small class="text-muted">Campaign Beginning</small>
+                </div>
+                <div class="card-body">
+                    <div class="recording-placeholder mb-3 text-center p-3 border rounded">
+                        <i class="fas fa-microphone fa-2x text-frost-dark mb-2"></i>
+                        <p class="mb-0 small">Session 0 & 1 combined recording</p>
+                    </div>
+                    
+                    <h6>Campaign Opening</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-star me-2 text-warning"></i>Characters met in the tavern "The Last Hearth"</li>
+                        <li><i class="fas fa-star me-2 text-warning"></i>First signs of the Everfrost reaching the town</li>
+                        <li><i class="fas fa-star me-2 text-warning"></i>Seer Whitevision delivered the initial prophecy</li>
+                        <li><i class="fas fa-star me-2 text-warning"></i>Party decided to seek answers together</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>Campaign Progress
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="progress-item mb-3">
+                        <small class="text-muted">Sessions Completed</small>
+                        <div class="progress">
+                            <div class="progress-bar bg-frost-progress" style="width: 30%">3 of 10+</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item mb-3">
+                        <small class="text-muted">Prophecy Fragments</small>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 25%">2 of 8</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item mb-3">
+                        <small class="text-muted">Major Locations Visited</small>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: 20%">3 of 15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-trophy me-2"></i>Epic Moments
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item mb-3">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <small class="text-muted">Session 3</small>
+                                <p class="mb-0 small">Successfully negotiated with Iceborn patrol instead of fighting</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item mb-3">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <small class="text-muted">Session 2</small>
+                                <p class="mb-0 small">Discovered the first Sunforged fragment in Ember's forge</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-info"></div>
+                            <div class="timeline-content">
+                                <small class="text-muted">Session 1</small>
+                                <p class="mb-0 small">Received the prophecy from Seer Whitevision</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-calendar-check me-2"></i>Session Archive
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent">
+                            <i class="fas fa-play-circle me-2"></i>Session 3 - Current
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent">
+                            <i class="fas fa-play-circle me-2"></i>Session 2 - Complete
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent">
+                            <i class="fas fa-play-circle me-2"></i>Session 1 - Complete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

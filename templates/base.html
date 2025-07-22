@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Frostborn Prophecy Campaign{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-frost-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">
+                <i class="fas fa-snowflake me-2"></i>Frostborn Prophecy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('players') }}">
+                            <i class="fas fa-users me-1"></i>Players
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('npcs') }}">
+                            <i class="fas fa-user-friends me-1"></i>NPCs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('sessions') }}">
+                            <i class="fas fa-play-circle me-1"></i>Sessions
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="worldDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>World
+                        </a>
+                        <ul class="dropdown-menu bg-frost-dark">
+                            <li><a class="dropdown-item text-light" href="{{ url_for('lore') }}">
+                                <i class="fas fa-book me-2"></i>Lore
+                            </a></li>
+                            <li><a class="dropdown-item text-light" href="{{ url_for('timeline') }}">
+                                <i class="fas fa-clock me-2"></i>Timeline
+                            </a></li>
+                            <li><a class="dropdown-item text-light" href="{{ url_for('map') }}">
+                                <i class="fas fa-map me-2"></i>Map
+                            </a></li>
+                            <li><a class="dropdown-item text-light" href="{{ url_for('factions') }}">
+                                <i class="fas fa-flag me-2"></i>Factions
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('prophecy') }}">
+                            <i class="fas fa-scroll me-1"></i>Prophecy
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-toolbox me-1"></i>Resources
+                        </a>
+                        <ul class="dropdown-menu bg-frost-dark">
+                            <li><a class="dropdown-item text-light" href="{{ url_for('bestiary') }}">
+                                <i class="fas fa-dragon me-2"></i>Bestiary
+                            </a></li>
+                            <li><a class="dropdown-item text-light" href="{{ url_for('items') }}">
+                                <i class="fas fa-gem me-2"></i>Items & Relics
+                            </a></li>
+                            <li><a class="dropdown-item text-light" href="{{ url_for('resources') }}">
+                                <i class="fas fa-dice-d20 me-2"></i>Player Resources
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('gallery') }}">
+                            <i class="fas fa-images me-1"></i>Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('chat') }}">
+                            <i class="fas fa-comments me-1"></i>Chat
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-light btn-sm" title="Toggle Dark Mode">
+                            <i id="theme-icon" class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-frost-dark text-light py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">
+                <i class="fas fa-snowflake me-2"></i>
+                Frostborn Prophecy Campaign Website
+                <i class="fas fa-snowflake ms-2"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        // Initialize theme from localStorage or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        // Update icon based on current theme
+        function updateThemeIcon(theme) {
+            const themeIcon = document.getElementById('theme-icon');
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+        }
+        
+        // Set initial icon
+        updateThemeIcon(currentTheme);
+        
+        // Theme toggle functionality
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    </script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

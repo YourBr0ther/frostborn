@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}NPC Library - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-user-friends me-3"></i>NPC Library
+        </h1>
+        <p class="lead">Key characters and their known agendas in the world of ice and fire</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Lord Frostcrown</h4>
+                    <small class="text-muted">
+                        <span class="badge bg-primary me-1">Iceborn Warlords</span>
+                    </small>
+                </div>
+                <div class="card-body">
+                    <div class="npc-portrait mb-3 text-center">
+                        <i class="fas fa-crown fa-3x text-frost-dark"></i>
+                    </div>
+                    <h6>Known Agenda</h6>
+                    <p class="small">Seeks to unite the northern clans under the banner of eternal winter. Believes the Everfrost is a blessing, not a curse.</p>
+                    
+                    <h6>What the Party Knows</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Commands the Ice Guard</li>
+                        <li><i class="fas fa-question-circle me-2 text-warning"></i>Has dealings with frost cultists</li>
+                        <li><i class="fas fa-times-circle me-2 text-danger"></i>Hostile to fire elementalists</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Ember Blackforge</h4>
+                    <small class="text-muted">
+                        <span class="badge bg-danger me-1">Ashblood Legion</span>
+                    </small>
+                </div>
+                <div class="card-body">
+                    <div class="npc-portrait mb-3 text-center">
+                        <i class="fas fa-hammer fa-3x text-danger"></i>
+                    </div>
+                    <h6>Known Agenda</h6>
+                    <p class="small">Master smith seeking to reforge the Sunforged weapons. Believes fire magic can push back the eternal winter.</p>
+                    
+                    <h6>What the Party Knows</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Expert in ancient metallurgy</li>
+                        <li><i class="fas fa-question-circle me-2 text-warning"></i>May have Sunforged fragments</li>
+                        <li><i class="fas fa-exclamation-circle me-2 text-info"></i>Seeking rare fire crystals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light h-100">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">Seer Whitevision</h4>
+                    <small class="text-muted">
+                        <span class="badge bg-secondary me-1">Frostborn Cult</span>
+                    </small>
+                </div>
+                <div class="card-body">
+                    <div class="npc-portrait mb-3 text-center">
+                        <i class="fas fa-eye fa-3x text-secondary"></i>
+                    </div>
+                    <h6>Known Agenda</h6>
+                    <p class="small">Mysterious prophet who claims to have visions of the true prophecy. Her loyalties remain unclear.</p>
+                    
+                    <h6>What the Party Knows</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-question-circle me-2 text-warning"></i>Speaks in riddles and metaphors</li>
+                        <li><i class="fas fa-question-circle me-2 text-warning"></i>Has knowledge of ancient events</li>
+                        <li><i class="fas fa-times-circle me-2 text-danger"></i>Cannot be trusted completely</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-lg-6">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-comments me-2"></i>Rumors & Player Notes
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="rumorsAccordion">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-frost-light" type="button" data-bs-toggle="collapse" data-bs-target="#rumor1">
+                                    About Lord Frostcrown
+                                </button>
+                            </h2>
+                            <div id="rumor1" class="accordion-collapse collapse" data-bs-parent="#rumorsAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-comment me-2"></i>Rumored to be seeking ancient ice artifacts</li>
+                                        <li><i class="fas fa-comment me-2"></i>Some say he's not entirely human anymore</li>
+                                        <li><i class="fas fa-comment me-2"></i>Player theory: Connected to the prophecy somehow</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-frost-light" type="button" data-bs-toggle="collapse" data-bs-target="#rumor2">
+                                    About Ember Blackforge
+                                </button>
+                            </h2>
+                            <div id="rumor2" class="accordion-collapse collapse" data-bs-parent="#rumorsAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-comment me-2"></i>Her forge never seems to go cold despite the Everfrost</li>
+                                        <li><i class="fas fa-comment me-2"></i>May have connections to the Keepers of the Last Ember</li>
+                                        <li><i class="fas fa-comment me-2"></i>Player theory: She knows more about the prophecy than she lets on</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-volume-up me-2"></i>Voice & RP References
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <strong>Lord Frostcrown</strong>
+                            <p class="small text-muted mb-1">Deep, commanding voice with northern accent</p>
+                            <p class="small">"The frost does not destroy—it preserves what is worthy."</p>
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <strong>Ember Blackforge</strong>
+                            <p class="small text-muted mb-1">Gruff but warm, speaks with blacksmith terminology</p>
+                            <p class="small">"Every blade has a purpose, every flame a destiny to forge."</p>
+                        </div>
+                        
+                        <div class="col-12">
+                            <strong>Seer Whitevision</strong>
+                            <p class="small text-muted mb-1">Whispery, cryptic, speaks as if seeing beyond the present</p>
+                            <p class="small">"The paths converge where ice meets fire, child of prophecy."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

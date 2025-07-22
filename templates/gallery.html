@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-images me-3"></i>Campaign Gallery
+        </h1>
+        <p class="lead">Player art, memorable moments, and inside jokes from the campaign</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h5 class="card-title mb-0">Character Art</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="art-placeholder p-4">
+                        <i class="fas fa-palette fa-4x text-frost-dark mb-3"></i>
+                        <p class="mb-0">Player-submitted character portraits and artwork will be displayed here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h5 class="card-title mb-0">Funny Moments</h5>
+                </div>
+                <div class="card-body">
+                    <h6><i class="fas fa-laugh me-2"></i>Session Highlights</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">• "I cast Fireball at the snowman!" - Epic fail moment</li>
+                        <li class="mb-2">• The Great Tavern Brawl of Session 1</li>
+                        <li class="mb-2">• Diplomatic victory through interpretive dance</li>
+                        <li class="mb-2">• "Wait, we can TALK to them?" - Every session</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h5 class="card-title mb-0">Screenshots & Maps</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="screenshot-placeholder p-4">
+                        <i class="fas fa-desktop fa-4x text-frost-dark mb-3"></i>
+                        <p class="mb-0">Screenshots from Roll20/Foundry sessions and battle maps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-star me-2"></i>Campaign Memes & Inside Jokes
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="meme-section p-3 border rounded mb-3">
+                                <h6><i class="fas fa-fire me-2"></i>"It's Always Fire Magic" Club</h6>
+                                <p class="small text-muted">Running gag about the party's tendency to solve every problem with fire magic, despite being in a frozen wasteland.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="meme-section p-3 border rounded mb-3">
+                                <h6><i class="fas fa-dice-d20 me-2"></i>The Cursed D20</h6>
+                                <p class="small text-muted">That one die that always seems to roll low at the worst possible moments.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="meme-section p-3 border rounded mb-3">
+                                <h6><i class="fas fa-snowman me-2"></i>Snowman Fear</h6>
+                                <p class="small text-muted">After the animated snowman encounter, the party is suspicious of all snow formations.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="meme-section p-3 border rounded mb-3">
+                                <h6><i class="fas fa-comment-alt me-2"></i>"That's What She Said"</h6>
+                                <p class="small text-muted">The inevitable response to any mention of "penetrating the frost" or "heating things up."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}Frostborn Prophecy - When the sun fades, who will shape the world's fate?{% endblock %}
+
+{% block content %}
+<div class="hero-banner">
+    <div class="hero-overlay">
+        <div class="container text-center text-white">
+            <h1 class="display-2 fw-bold mb-3">
+                <i class="fas fa-snowflake me-3"></i>
+                Frostborn Prophecy
+                <i class="fas fa-fire ms-3"></i>
+            </h1>
+            <p class="lead fs-3 mb-4">When the sun fades, who will shape the world's fate?</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="quick-links">
+                        <a href="{{ url_for('players') }}" class="btn btn-frost-light btn-lg me-3 mb-2">
+                            <i class="fas fa-users me-2"></i>Player Bios
+                        </a>
+                        <a href="{{ url_for('npcs') }}" class="btn btn-frost-light btn-lg me-3 mb-2">
+                            <i class="fas fa-user-friends me-2"></i>NPCs
+                        </a>
+                        <a href="{{ url_for('timeline') }}" class="btn btn-frost-light btn-lg me-3 mb-2">
+                            <i class="fas fa-clock me-2"></i>Timeline
+                        </a>
+                        <a href="{{ url_for('sessions') }}" class="btn btn-frost-light btn-lg mb-2">
+                            <i class="fas fa-play-circle me-2"></i>Sessions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-book-open me-2"></i>Campaign Overview
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <p class="lead">The world stands on the precipice of eternal winter. The Everfrost spreads across the land, consuming everything in its path, while ancient powers stir in the depths of ice and flame.</p>
+                    
+                    <p>In this realm where the balance between frost and fire determines the fate of all living things, our heroes must navigate treacherous alliances, uncover forgotten prophecies, and make choices that will echo through the ages. Will they embrace the cold embrace of the Everfrost, seek to rekindle the dying flames, or forge a new path between ice and fire?</p>
+                    
+                    <p>The prophecy speaks of chosen ones who will either herald the world's salvation or its final doom. The question remains: which destiny will our heroes choose?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-calendar-alt me-2"></i>Next Session
+                    </h3>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="text-frost-dark">TBD</h4>
+                    <p class="mb-2"><strong>Current Location:</strong></p>
+                    <p class="text-muted">The Frozen Crossroads</p>
+                    <p class="mb-0"><small class="text-muted">Check with your DM for the next session date!</small></p>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-thermometer-half me-2"></i>Everfrost Progress
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <p class="mb-2">The spreading of eternal winter...</p>
+                    <div class="progress mb-2" style="height: 25px;">
+                        <div class="progress-bar bg-frost-progress" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                            <span class="fw-bold">35%</span>
+                        </div>
+                    </div>
+                    <small class="text-muted">The frost continues its relentless advance...</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-compass me-2"></i>Quick Navigation
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-3">
+                            <a href="{{ url_for('lore') }}" class="btn btn-outline-frost w-100 p-3">
+                                <i class="fas fa-book fa-2x mb-2"></i>
+                                <br><strong>Lore & Worldbuilding</strong>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="{{ url_for('prophecy') }}" class="btn btn-outline-frost w-100 p-3">
+                                <i class="fas fa-scroll fa-2x mb-2"></i>
+                                <br><strong>Prophecy Board</strong>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="{{ url_for('factions') }}" class="btn btn-outline-frost w-100 p-3">
+                                <i class="fas fa-flag fa-2x mb-2"></i>
+                                <br><strong>Faction Tracker</strong>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="{{ url_for('gallery') }}" class="btn btn-outline-frost w-100 p-3">
+                                <i class="fas fa-images fa-2x mb-2"></i>
+                                <br><strong>Gallery</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

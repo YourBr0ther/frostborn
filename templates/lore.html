@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block title %}Lore & Worldbuilding - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-book me-3"></i>Lore & Worldbuilding
+        </h1>
+        <p class="lead">The rich history and mysteries of a world caught between ice and fire</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-map-marked-alt me-2"></i>World Map
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="map-placeholder text-center p-5 border rounded">
+                        <i class="fas fa-globe fa-4x text-frost-dark mb-3"></i>
+                        <h4>Interactive World Map</h4>
+                        <p class="text-muted">Click on locations to learn more about them</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-4 mb-3">
+                                <div class="location-marker p-3 border rounded bg-light">
+                                    <h6><i class="fas fa-mountain me-2"></i>Everfrost Wastes</h6>
+                                    <small class="text-muted">The spreading realm of eternal winter</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="location-marker p-3 border rounded bg-light">
+                                    <h6><i class="fas fa-fire me-2"></i>Sunforged Spire</h6>
+                                    <small class="text-muted">Ancient tower of flame magic</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="location-marker p-3 border rounded bg-light">
+                                    <h6><i class="fas fa-crown me-2"></i>Frozen Throne</h6>
+                                    <small class="text-muted">Seat of the Iceborn power</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-scroll me-2"></i>Cultural Lore
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="loreAccordion">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-frost-light" type="button" data-bs-toggle="collapse" data-bs-target="#deities">
+                                    <i class="fas fa-hands-pray me-3"></i>Deities & Divine Powers
+                                </button>
+                            </h2>
+                            <div id="deities" class="accordion-collapse collapse show" data-bs-parent="#loreAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6><i class="fas fa-snowflake me-2 text-primary"></i>Khione, the Frost Mother</h6>
+                                            <p class="small">Goddess of winter, preservation, and the eternal cycle. Her followers believe the Everfrost is her blessing upon the world.</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6><i class="fas fa-fire me-2 text-danger"></i>Ignis, the Flame Eternal</h6>
+                                            <p class="small">God of fire, passion, and change. His priests maintain that only flame can bring life and prevent stagnation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-frost-light" type="button" data-bs-toggle="collapse" data-bs-target="#balance">
+                                    <i class="fas fa-balance-scale me-3"></i>The Elemental Balance
+                                </button>
+                            </h2>
+                            <div id="balance" class="accordion-collapse collapse" data-bs-parent="#loreAccordion">
+                                <div class="accordion-body">
+                                    <p>For millennia, the world existed in perfect balance between frost and fire. Neither element dominated completely, creating seasons, weather patterns, and the natural order of life and death.</p>
+                                    <p>The Summoning shattered this balance, and now the world tilts toward eternal winter. Some seek to restore the balance, others to tip it toward flame, and still others believe a new equilibrium must be forged.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-frost-light" type="button" data-bs-toggle="collapse" data-bs-target="#magic">
+                                    <i class="fas fa-magic me-3"></i>Magic in the World
+                                </button>
+                            </h2>
+                            <div id="magic" class="accordion-collapse collapse" data-bs-parent="#loreAccordion">
+                                <div class="accordion-body">
+                                    <p>Magic flows from the fundamental forces of creation - primarily frost and fire, but also the spaces between them. As the Everfrost spreads, ice magic grows stronger while fire magic requires greater effort and rare components.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-snowflake me-2 text-primary"></i><strong>Frost Magic:</strong> Preservation, slowing, crystallization</li>
+                                        <li><i class="fas fa-fire me-2 text-danger"></i><strong>Fire Magic:</strong> Transformation, acceleration, purification</li>
+                                        <li><i class="fas fa-leaf me-2 text-success"></i><strong>Life Magic:</strong> The rare balance between elements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-hourglass-start me-2"></i>Timeline of the World
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-section mb-4">
+                            <h6 class="text-success"><i class="fas fa-seedling me-2"></i>Before the Frost</h6>
+                            <ul class="list-unstyled small">
+                                <li>• The Age of Balance (0-2000 years ago)</li>
+                                <li>• Great kingdoms of both elements</li>
+                                <li>• The original Sunforged artifacts created</li>
+                                <li>• Prophecies first spoken</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="timeline-section mb-4">
+                            <h6 class="text-warning"><i class="fas fa-meteor me-2"></i>The Summoning</h6>
+                            <ul class="list-unstyled small">
+                                <li>• The ritual that broke the balance</li>
+                                <li>• First appearance of the Everfrost</li>
+                                <li>• The Great Scattering of peoples</li>
+                                <li>• Formation of current factions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="timeline-section">
+                            <h6 class="text-danger"><i class="fas fa-snowflake me-2"></i>Now</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Everfrost spreads 35% of known world</li>
+                                <li>• Desperate alliances form and break</li>
+                                <li>• Heroes emerge to fulfill prophecy</li>
+                                <li>• The convergence approaches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-puzzle-piece me-2"></i>Prophecy Fragments
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <p class="small text-muted mb-3">Pieces of the ancient prophecy discovered so far...</p>
+                    
+                    <div class="prophecy-fragment p-3 border rounded mb-3">
+                        <blockquote class="blockquote mb-0">
+                            <p class="small fst-italic">"When winter's grasp grows ever tight,<br>
+                            And flame retreats from fading light..."</p>
+                            <footer class="blockquote-footer small">Fragment I - <cite>Found in Session 1</cite></footer>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="prophecy-fragment p-3 border rounded mb-3">
+                        <blockquote class="blockquote mb-0">
+                            <p class="small fst-italic">"...The chosen few shall stand between,<br>
+                            Ice and fire, frost and flame..."</p>
+                            <footer class="blockquote-footer small">Fragment II - <cite>Found in Session 2</cite></footer>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="text-center">
+                        <i class="fas fa-question-circle fa-2x text-muted mb-2"></i>
+                        <p class="small text-muted">More fragments await discovery...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

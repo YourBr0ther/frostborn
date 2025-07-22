@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block title %}Prophecy Board - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-scroll me-3"></i>Prophecy Board
+        </h1>
+        <p class="lead">Piece together the ancient prophecy that foretells the world's fate</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-puzzle-piece me-2"></i>Collected Fragments
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="prophecy-reconstruction p-4 border rounded text-center">
+                        <div class="prophecy-lines">
+                            <div class="prophecy-fragment mb-3 p-3 border rounded discovered">
+                                <p class="fst-italic mb-1">"When winter's grasp grows ever tight,"</p>
+                                <small class="text-success">Fragment I - Discovered Session 1</small>
+                            </div>
+                            
+                            <div class="prophecy-fragment mb-3 p-3 border rounded discovered">
+                                <p class="fst-italic mb-1">"And flame retreats from fading light,"</p>
+                                <small class="text-success">Fragment II - Discovered Session 1</small>
+                            </div>
+                            
+                            <div class="prophecy-fragment mb-3 p-3 border rounded discovered">
+                                <p class="fst-italic mb-1">"The chosen few shall stand between,"</p>
+                                <small class="text-success">Fragment III - Discovered Session 2</small>
+                            </div>
+                            
+                            <div class="prophecy-fragment mb-3 p-3 border rounded discovered">
+                                <p class="fst-italic mb-1">"Ice and fire, frost and flame."</p>
+                                <small class="text-success">Fragment IV - Discovered Session 2</small>
+                            </div>
+                            
+                            <div class="prophecy-fragment mb-3 p-3 border rounded unknown">
+                                <p class="fst-italic text-muted mb-1">"? ? ? ? ? ? ?,"</p>
+                                <small class="text-muted">Fragment V - Not yet discovered</small>
+                            </div>
+                            
+                            <div class="prophecy-fragment mb-3 p-3 border rounded unknown">
+                                <p class="fst-italic text-muted mb-1">"? ? ? ? ? ? ?."</p>
+                                <small class="text-muted">Fragment VI - Not yet discovered</small>
+                            </div>
+                            
+                            <div class="prophecy-fragment mb-3 p-3 border rounded unknown">
+                                <p class="fst-italic text-muted mb-1">"? ? ? ? ? ? ?,"</p>
+                                <small class="text-muted">Fragment VII - Not yet discovered</small>
+                            </div>
+                            
+                            <div class="prophecy-fragment p-3 border rounded unknown">
+                                <p class="fst-italic text-muted mb-1">"? ? ? ? ? ? ?."</p>
+                                <small class="text-muted">Fragment VIII - Final piece</small>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 50%" role="progressbar">
+                                    <span class="fw-bold">50% Complete</span>
+                                </div>
+                            </div>
+                            <small class="text-muted mt-2 d-block">4 of 8 fragments discovered</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-lightbulb me-2"></i>Player Theories & Interpretations
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="theory-section mb-4">
+                        <h6><i class="fas fa-user me-2"></i>Current Interpretations</h6>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent">
+                                <strong>"The chosen few"</strong> - Clearly refers to our party of heroes
+                                <span class="badge bg-success ms-2">High Confidence</span>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <strong>"Stand between ice and fire"</strong> - We must find balance, not choose sides
+                                <span class="badge bg-warning ms-2">Theory</span>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <strong>"Winter's grasp"</strong> - The spreading Everfrost threatening the world
+                                <span class="badge bg-success ms-2">Confirmed</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="theory-section">
+                        <h6><i class="fas fa-question-circle me-2"></i>Open Questions</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-arrow-right me-2"></i>What happens after we "stand between" the elements?</li>
+                            <li class="mb-2"><i class="fas fa-arrow-right me-2"></i>Is there a specific location where this must occur?</li>
+                            <li class="mb-2"><i class="fas fa-arrow-right me-2"></i>Are the Sunforged artifacts key to fulfilling the prophecy?</li>
+                            <li class="mb-2"><i class="fas fa-arrow-right me-2"></i>What role does Seer Whitevision truly play?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card bg-frost-light mb-4">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-search me-2"></i>Discovery Locations
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="discovery-list">
+                        <div class="discovery-item mb-3 p-3 border rounded">
+                            <h6 class="mb-1"><i class="fas fa-home me-2"></i>The Last Hearth Tavern</h6>
+                            <small class="text-muted mb-2 d-block">Session 1</small>
+                            <p class="small mb-0">Fragments I & II discovered when Seer Whitevision delivered the initial prophecy.</p>
+                        </div>
+                        
+                        <div class="discovery-item mb-3 p-3 border rounded">
+                            <h6 class="mb-1"><i class="fas fa-hammer me-2"></i>Ember's Forge</h6>
+                            <small class="text-muted mb-2 d-block">Session 2</small>
+                            <p class="small mb-0">Fragments III & IV found etched into the Sunforged fragment hidden in the forge.</p>
+                        </div>
+                        
+                        <div class="discovery-item p-3 border rounded text-center">
+                            <i class="fas fa-question-circle fa-2x text-muted mb-2"></i>
+                            <p class="small text-muted mb-0">More fragments await discovery in your journey...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-magic me-2"></i>Prophetic Visions
+                    </h4>
+                </div>
+                <div class="card-body text-center">
+                    <div class="vision-display p-4">
+                        <i class="fas fa-eye fa-3x text-frost-dark mb-3"></i>
+                        <h6>Visual Hints</h6>
+                        <p class="small text-muted mb-3">As more fragments are discovered, mystical visions appear...</p>
+                        
+                        <div class="vision-elements">
+                            <div class="vision-item mb-2">
+                                <i class="fas fa-snowflake text-primary me-2"></i>
+                                <span class="small">Cracking ice formations</span>
+                            </div>
+                            <div class="vision-item mb-2">
+                                <i class="fas fa-fire text-danger me-2"></i>
+                                <span class="small">Flickering flame imagery</span>
+                            </div>
+                            <div class="vision-item">
+                                <i class="fas fa-balance-scale text-warning me-2"></i>
+                                <span class="small">Symbols of balance and harmony</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.prophecy-fragment.discovered {
+    background: rgba(144, 202, 249, 0.1);
+    border-color: var(--frost-medium) !important;
+}
+
+.prophecy-fragment.unknown {
+    background: rgba(128, 128, 128, 0.1);
+    border-color: #ccc !important;
+}
+
+.discovery-item {
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.discovery-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.vision-item {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+</style>
+{% endblock %}

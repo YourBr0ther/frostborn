@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block title %}Items & Relics - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-gem me-3"></i>Items & Relics Discovered
+        </h1>
+        <p class="lead">Magical artifacts and notable gear collected on your journey</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-scroll me-2"></i>Sunforged Artifacts
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="artifact-item mb-4 p-3 border rounded">
+                        <div class="row align-items-center">
+                            <div class="col-3 text-center">
+                                <i class="fas fa-gem fa-3x text-danger"></i>
+                            </div>
+                            <div class="col-9">
+                                <h5 class="mb-1">Sunforged Fragment I</h5>
+                                <p class="small mb-2">A shard of crystallized fire magic, warm to the touch even in the coldest environment.</p>
+                                <div class="item-details">
+                                    <span class="badge bg-danger me-2">Legendary</span>
+                                    <span class="badge bg-info">Fire Magic</span>
+                                </div>
+                                <small class="text-muted d-block mt-2">Found in: Ember's Forge (Session 2)</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="artifact-search p-3 border rounded text-center">
+                        <i class="fas fa-search fa-2x text-muted mb-2"></i>
+                        <h6>More Fragments Await</h6>
+                        <p class="small text-muted mb-0">Ancient texts suggest 7 more Sunforged fragments exist across the realm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-key me-2"></i>Keys to the Prophecy
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="prophecy-key mb-4 p-3 border rounded">
+                        <div class="row align-items-center">
+                            <div class="col-3 text-center">
+                                <i class="fas fa-eye fa-3x text-secondary"></i>
+                            </div>
+                            <div class="col-9">
+                                <h5 class="mb-1">Seer's Vision Crystal</h5>
+                                <p class="small mb-2">A cloudy crystal that occasionally shows glimpses of possible futures.</p>
+                                <div class="item-details">
+                                    <span class="badge bg-secondary me-2">Rare</span>
+                                    <span class="badge bg-warning">Divination</span>
+                                </div>
+                                <small class="text-muted d-block mt-2">Given by: Seer Whitevision (Session 1)</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="empty-slots">
+                        <div class="empty-slot p-3 border rounded text-center mb-2">
+                            <i class="fas fa-question fa-2x text-muted"></i>
+                            <p class="small text-muted mb-0">More prophetic items to be discovered...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-sword me-2"></i>Player Gear Highlights
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="player-gear p-3 border rounded">
+                                <h5><i class="fas fa-user-circle me-2"></i>Character Name 1</h5>
+                                <div class="gear-item mb-2">
+                                    <strong><i class="fas fa-magic me-2"></i>Frostbane Staff</strong>
+                                    <p class="small mb-1">Carved from ancient oak, this staff pulses with warm amber light that never dims, even in the deepest cold.</p>
+                                    <small class="text-muted">"The frost fears this humble branch more than any blade." - Character quote</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <div class="player-gear p-3 border rounded">
+                                <h5><i class="fas fa-user-circle me-2"></i>Character Name 2</h5>
+                                <div class="gear-item mb-2">
+                                    <strong><i class="fas fa-shield-alt me-2"></i>Shield of Two Elements</strong>
+                                    <p class="small mb-1">A unique shield that displays both ice and flame motifs, adapting its protection to counter the wielder's greatest threat.</p>
+                                    <small class="text-muted">"Balance in all things, even in defense." - Character motto</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-coins me-2"></i>Valuable Items
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-gem me-2 text-primary"></i>
+                            <span class="small">Frost Crystal (x3) - Spellcasting component</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-fire me-2 text-danger"></i>
+                            <span class="small">Emberstone (x1) - Rare fire reagent</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-scroll me-2 text-warning"></i>
+                            <span class="small">Ancient Map Fragment - Pre-frost geography</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-key me-2 text-info"></i>
+                            <span class="small">Iceborn Patrol Badge - Diplomatic token</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-book me-2"></i>Lore Items
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-book-open me-2 text-secondary"></i>
+                            <span class="small">"Songs of the Last Spring" - Pre-frost poetry</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-scroll me-2 text-secondary"></i>
+                            <span class="small">Blacksmith's Notes - Sunforged forging techniques</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map me-2 text-secondary"></i>
+                            <span class="small">Trade Route Logs - Economic impact of Everfrost</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-tools me-2"></i>Utility Items
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-thermometer-half me-2 text-info"></i>
+                            <span class="small">Ever-warm Blankets (x2) - Cold weather survival</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-flask me-2 text-success"></i>
+                            <span class="small">Healing Potions (x5) - Emergency medical aid</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-compass me-2 text-warning"></i>
+                            <span class="small">Frost-Proof Compass - Navigation tool</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-fire-alt me-2 text-danger"></i>
+                            <span class="small">Tinder Box of Endless Flame - Never goes out</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

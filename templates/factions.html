@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}Faction Tracker - Frostborn Prophecy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="page-header mb-5">
+        <h1 class="display-4 text-frost-dark">
+            <i class="fas fa-flag me-3"></i>Faction Tracker
+        </h1>
+        <p class="lead">Navigate the complex web of alliances and rivalries</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-snowflake me-2"></i>Iceborn Warlords
+                        <span class="badge bg-warning float-end">Neutral</span>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="faction-icon mb-3 text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                    </div>
+                    <h6>Who are they?</h6>
+                    <p class="small">Northern clans united under the belief that the Everfrost is a divine blessing. They seek to spread winter's embrace across all lands.</p>
+                    
+                    <h6>Visible Goals</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-target me-2"></i>Expand Everfrost territory</li>
+                        <li><i class="fas fa-crown me-2"></i>Establish ice-based dominion</li>
+                        <li><i class="fas fa-users me-2"></i>Convert or conquer fire-worshippers</li>
+                    </ul>
+                    
+                    <h6>Recent Interactions</h6>
+                    <p class="small text-muted">Diplomatic encounter at Frozen Crossroads - information gained about their patrol routes.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-fire me-2"></i>Ashblood Legion
+                        <span class="badge bg-success float-end">Friendly</span>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="faction-icon mb-3 text-center">
+                        <i class="fas fa-fist-raised fa-3x text-danger"></i>
+                    </div>
+                    <h6>Who are they?</h6>
+                    <p class="small">Military organization dedicated to pushing back the Everfrost through fire magic and martial prowess. They believe flame is the key to salvation.</p>
+                    
+                    <h6>Visible Goals</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-fire me-2"></i>Restore fire's dominance</li>
+                        <li><i class="fas fa-sword me-2"></i>Military campaign against frost</li>
+                        <li><i class="fas fa-hammer me-2"></i>Forge new Sunforged weapons</li>
+                    </ul>
+                    
+                    <h6>Recent Interactions</h6>
+                    <p class="small text-muted">Positive alliance through Ember Blackforge - mutual interest in Sunforged artifacts.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-candle-holder me-2"></i>Keepers of the Last Ember
+                        <span class="badge bg-info float-end">Unknown</span>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="faction-icon mb-3 text-center">
+                        <i class="fas fa-praying-hands fa-3x text-warning"></i>
+                    </div>
+                    <h6>Who are they?</h6>
+                    <p class="small">Secretive religious order devoted to preserving the last flames of the old world. They guard ancient knowledge and sacred fire sites.</p>
+                    
+                    <h6>Visible Goals</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-book me-2"></i>Preserve ancient knowledge</li>
+                        <li><i class="fas fa-candle-holder me-2"></i>Maintain sacred flames</li>
+                        <li><i class="fas fa-question me-2"></i>Hidden prophetic agenda</li>
+                    </ul>
+                    
+                    <h6>Recent Interactions</h6>
+                    <p class="small text-muted">No direct contact yet - rumored to have connections to Ember Blackforge.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-eye me-2"></i>Frostborn Cult
+                        <span class="badge bg-danger float-end">Hostile</span>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="faction-icon mb-3 text-center">
+                        <i class="fas fa-user-secret fa-3x text-secondary"></i>
+                    </div>
+                    <h6>Who are they?</h6>
+                    <p class="small">Fanatical followers who believe the Everfrost heralds a new age. They actively work to accelerate winter's spread and eliminate resistance.</p>
+                    
+                    <h6>Visible Goals</h6>
+                    <ul class="small list-unstyled">
+                        <li><i class="fas fa-snowflake me-2"></i>Accelerate Everfrost spread</li>
+                        <li><i class="fas fa-skull me-2"></i>Eliminate flame-bearers</li>
+                        <li><i class="fas fa-magic me-2"></i>Corrupt natural balance</li>
+                    </ul>
+                    
+                    <h6>Recent Interactions</h6>
+                    <p class="small text-muted">Hostile encounters suggested through Seer Whitevision's warnings and cult activity reports.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card bg-frost-light">
+                <div class="card-header bg-frost-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-project-diagram me-2"></i>Faction Relationships
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="relationship-grid">
+                        <div class="row text-center">
+                            <div class="col-md-3 mb-3">
+                                <div class="relationship-card p-3 border rounded">
+                                    <h6><i class="fas fa-snowflake me-2"></i> vs <i class="fas fa-fire ms-2"></i></h6>
+                                    <p class="small mb-1">Iceborn vs Ashblood</p>
+                                    <span class="badge bg-danger">Openly Hostile</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="relationship-card p-3 border rounded">
+                                    <h6><i class="fas fa-fire me-2"></i> + <i class="fas fa-candle-holder ms-2"></i></h6>
+                                    <p class="small mb-1">Ashblood + Keepers</p>
+                                    <span class="badge bg-success">Allied</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="relationship-card p-3 border rounded">
+                                    <h6><i class="fas fa-snowflake me-2"></i> ? <i class="fas fa-eye ms-2"></i></h6>
+                                    <p class="small mb-1">Iceborn vs Cult</p>
+                                    <span class="badge bg-warning">Complex</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="relationship-card p-3 border rounded">
+                                    <h6><i class="fas fa-users me-2"></i> vs <i class="fas fa-eye ms-2"></i></h6>
+                                    <p class="small mb-1">Party vs Cult</p>
+                                    <span class="badge bg-danger">Enemies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
