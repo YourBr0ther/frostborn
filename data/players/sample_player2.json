@@ -1,0 +1,38 @@
+{
+  "name": "Elara Moonwhisper",
+  "player": "Sarah",
+  "class": "Wizard",
+  "level": 5,
+  "race": "Elf",
+  "portrait": null,
+  "backstory": "A scholar of ancient magic from the Evermeet archives, Elara discovered references to the Frostborn Prophecy in texts thought lost to time. She joined the party to research the prophecy firsthand and find magical solutions to the growing threat.",
+  "abilities": [
+    {
+      "name": "Ritual Casting",
+      "icon": "fas fa-magic",
+      "description": "Cast spells as rituals"
+    },
+    {
+      "name": "Arcane Recovery",
+      "icon": "fas fa-sparkles",
+      "description": "Recover spell slots on short rest"
+    },
+    {
+      "name": "Ancient Knowledge",
+      "icon": "fas fa-book",
+      "description": "Expert in history and arcana"
+    }
+  ],
+  "recent_quote": {
+    "text": "The texts were right - the frost magic here is unlike anything I've studied!",
+    "context": "Examining the cursed ice formations"
+  },
+  "stats": {
+    "ac": 13,
+    "hp": 32,
+    "speed": 30
+  },
+  "background": "Sage",
+  "alignment": "Neutral Good",
+  "active": true
+}

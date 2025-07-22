@@ -3,13 +3,40 @@ from flask_socketio import SocketIO, emit
 from datetime import datetime
 import json
 import os
+import glob
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'frostborn_prophecy_secret_key'
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 
-# Chat messages storage file
+# Data storage configuration
 MESSAGES_FILE = 'chat_messages.json'
+PLAYERS_DIR = 'data/players'
+
+def load_players():
+    """Load all player character data from JSON files"""
+    players = []
+    
+    # Create players directory if it doesn't exist
+    if not os.path.exists(PLAYERS_DIR):
+        os.makedirs(PLAYERS_DIR, exist_ok=True)
+        return players
+    
+    # Load all JSON files in the players directory
+    for file_path in glob.glob(os.path.join(PLAYERS_DIR, '*.json')):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                player_data = json.load(f)
+                # Only include active players
+                if player_data.get('active', True):
+                    players.append(player_data)
+        except (json.JSONDecodeError, IOError, KeyError) as e:
+            print(f"Error loading player file {file_path}: {e}")
+            continue
+    
+    # Sort players by name for consistent display
+    players.sort(key=lambda x: x.get('name', ''))
+    return players
 
 def load_messages():
     """Load messages from JSON file"""
@@ -42,7 +69,8 @@ def index():
 
 @app.route('/players')
 def players():
-    return render_template('players.html')
+    players_data = load_players()
+    return render_template('players.html', players=players_data)
 
 @app.route('/npcs')
 def npcs():

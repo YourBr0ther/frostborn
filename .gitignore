@@ -99,3 +99,7 @@ pids/
 
 # Chat messages storage
 chat_messages.json
+
+# Player data files (optional - can be version controlled or kept local)
+# Uncomment the line below if you want to keep player data private
+# data/players/*.json

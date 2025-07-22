@@ -1,0 +1,38 @@
+{
+  "name": "Thora Ironforge",
+  "player": "Alex",
+  "class": "Fighter",
+  "level": 5,
+  "race": "Dwarf",
+  "portrait": null,
+  "backstory": "Born in the mountain halls of Ironforge, Thora left her clan after a prophetic dream showed her the world covered in eternal winter. She seeks to prevent this fate and prove that even the smallest person can change the course of the future.",
+  "abilities": [
+    {
+      "name": "Second Wind",
+      "icon": "fas fa-heart",
+      "description": "Battle-hardened recovery"
+    },
+    {
+      "name": "Action Surge", 
+      "icon": "fas fa-bolt",
+      "description": "Extra burst of activity"
+    },
+    {
+      "name": "Mountain Training",
+      "icon": "fas fa-mountain",
+      "description": "Expert climber and survivalist"
+    }
+  ],
+  "recent_quote": {
+    "text": "By my beard, we'll see this prophecy undone!",
+    "context": "Before charging into the frost giant's lair"
+  },
+  "stats": {
+    "ac": 18,
+    "hp": 52,
+    "speed": 25
+  },
+  "background": "Folk Hero",
+  "alignment": "Lawful Good",
+  "active": true
+}

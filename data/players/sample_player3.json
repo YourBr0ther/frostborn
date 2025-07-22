@@ -1,0 +1,38 @@
+{
+  "name": "Finn Shadowstep",
+  "player": "Mike",
+  "class": "Rogue",
+  "level": 4,
+  "race": "Halfling",
+  "portrait": null,
+  "backstory": "A former street thief from the coastal city of Saltmarsh, Finn joined the group after his mentor was killed by mysterious frost-touched assassins. He seeks revenge while using his skills to help uncover the conspiracy behind the growing winter.",
+  "abilities": [
+    {
+      "name": "Sneak Attack",
+      "icon": "fas fa-user-ninja",
+      "description": "Devastating surprise strikes"
+    },
+    {
+      "name": "Thieves' Cant",
+      "icon": "fas fa-eye",
+      "description": "Secret language of rogues"
+    },
+    {
+      "name": "Lucky",
+      "icon": "fas fa-clover",
+      "description": "Halfling luck saves the day"
+    }
+  ],
+  "recent_quote": {
+    "text": "I don't like the look of those footprints... too perfect, too cold.",
+    "context": "Tracking mysterious figures through the snow"
+  },
+  "stats": {
+    "ac": 15,
+    "hp": 38,
+    "speed": 25
+  },
+  "background": "Criminal",
+  "alignment": "Chaotic Good",
+  "active": true
+}

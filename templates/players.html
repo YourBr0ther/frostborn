@@ -12,69 +12,77 @@
     </div>
     
     <div class="row">
+        {% for player in players %}
         <div class="col-md-6 mb-4">
             <div class="card bg-frost-light h-100">
                 <div class="card-header bg-frost-dark text-white">
-                    <h3 class="card-title mb-0">Character Name 1</h3>
+                    <h3 class="card-title mb-0">{{ player.name }}</h3>
+                    {% if player.player %}
+                    <small class="text-light">Played by {{ player.player }}</small>
+                    {% endif %}
                 </div>
                 <div class="card-body">
                     <div class="character-portrait mb-3 text-center">
+                        {% if player.portrait %}
+                        <img src="{{ player.portrait }}" alt="{{ player.name }}" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover;">
+                        {% else %}
                         <i class="fas fa-user-circle fa-5x text-frost-dark"></i>
+                        {% endif %}
                     </div>
-                    <h5>Class & Level</h5>
-                    <p class="text-muted">Level X [Class Name]</p>
+                    
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <h5>Class & Level</h5>
+                            <p class="text-muted">Level {{ player.level }} {{ player.class }}{% if player.race %} ({{ player.race }}){% endif %}</p>
+                        </div>
+                        {% if player.stats %}
+                        <div class="col-6">
+                            <h5>Stats</h5>
+                            <small class="text-muted">
+                                AC: {{ player.stats.ac }} | HP: {{ player.stats.hp }} | Speed: {{ player.stats.speed }}ft
+                            </small>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    {% if player.background %}
+                    <p class="small"><strong>Background:</strong> {{ player.background }}{% if player.alignment %} | {{ player.alignment }}{% endif %}</p>
+                    {% endif %}
                     
                     <h5>Backstory</h5>
-                    <p>A brief, player-approved backstory will go here. This section will contain the character's background, motivations, and how they came to be part of this group.</p>
+                    <p>{{ player.backstory }}</p>
                     
+                    {% if player.abilities %}
                     <h5>Notable Abilities</h5>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-magic me-2 text-frost-dark"></i>Special Ability 1</li>
-                        <li><i class="fas fa-sword me-2 text-frost-dark"></i>Combat Expertise</li>
-                        <li><i class="fas fa-eye me-2 text-frost-dark"></i>Unique Skill</li>
+                        {% for ability in player.abilities %}
+                        <li><i class="{{ ability.icon }} me-2 text-frost-dark"></i>{{ ability.name }}{% if ability.description %} - {{ ability.description }}{% endif %}</li>
+                        {% endfor %}
                     </ul>
+                    {% endif %}
                     
+                    {% if player.recent_quote %}
                     <div class="quote-box mt-3">
                         <blockquote class="blockquote">
-                            <p class="mb-0">"Quote of the session goes here!"</p>
-                            <footer class="blockquote-footer">Recent memorable moment</footer>
+                            <p class="mb-0">"{{ player.recent_quote.text }}"</p>
+                            <footer class="blockquote-footer">{{ player.recent_quote.context }}</footer>
                         </blockquote>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        
-        <div class="col-md-6 mb-4">
-            <div class="card bg-frost-light h-100">
-                <div class="card-header bg-frost-dark text-white">
-                    <h3 class="card-title mb-0">Character Name 2</h3>
-                </div>
-                <div class="card-body">
-                    <div class="character-portrait mb-3 text-center">
-                        <i class="fas fa-user-circle fa-5x text-frost-dark"></i>
-                    </div>
-                    <h5>Class & Level</h5>
-                    <p class="text-muted">Level X [Class Name]</p>
-                    
-                    <h5>Backstory</h5>
-                    <p>Another character's background story will be detailed here, focusing on their role in the party and their personal stakes in the campaign.</p>
-                    
-                    <h5>Notable Abilities</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-shield-alt me-2 text-frost-dark"></i>Defensive Mastery</li>
-                        <li><i class="fas fa-heart me-2 text-frost-dark"></i>Healing Powers</li>
-                        <li><i class="fas fa-compass me-2 text-frost-dark"></i>Navigation Expert</li>
-                    </ul>
-                    
-                    <div class="quote-box mt-3">
-                        <blockquote class="blockquote">
-                            <p class="mb-0">"Another memorable quote!"</p>
-                            <footer class="blockquote-footer">Epic roleplay moment</footer>
-                        </blockquote>
-                    </div>
+        {% else %}
+        <div class="col-12">
+            <div class="card bg-frost-light">
+                <div class="card-body text-center">
+                    <i class="fas fa-users fa-3x text-frost-dark mb-3"></i>
+                    <h5>No Player Characters Found</h5>
+                    <p class="text-muted">Add JSON files to the <code>data/players/</code> directory to display characters here.</p>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
     
     <!-- Add more character cards as needed -->
